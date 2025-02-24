@@ -29,6 +29,11 @@ h1 {
     font-family: Arial;
     color: yellow;
 }
+h2 {
+    text-align: center;
+    font-family: Arial;
+    color: purple;
+}
 p {
     line-height: 150%;
 }
