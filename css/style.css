@@ -16,6 +16,9 @@ main {
     font-size: 22px;
     background-color: rgba(255, 0, 0, 0.2);
 }
+footer{
+    background-color: rgba(0, 255, 255, 0.2);
+}
 li {
     display: inline-block;
     width: 200px;
