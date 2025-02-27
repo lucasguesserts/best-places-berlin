@@ -1,51 +1,55 @@
 body {
-    font-family: 'Courier New', Courier, monospace, 'Times New Roman', Verdana, Geneva;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    background-color: #fffcee;
 }
 header {
-    background-color: #085208;
-    a {
-        color: white;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-image: url(../images/BaconGallupPark.jpg);
+    background-position: center;
+    background-size: cover;
+}
+h1 {
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #fffcee;
+    color: #000;
+    text-decoration: underline;
 }
 nav {
-    display: inline-block;
-    width: 80%;
-    background-color: #000000;
+    display: block;
+    margin: 20px auto;
 }
-nav li, nav ul {
-    display: inline-block;
+nav a {
+    color: #000;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    background-color: #ddd;
+    padding: 5px;
 }
-nav img {
-    width: 10%;
-    position: relative;
-    top: 20px;
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
 }
-main {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 22px;
-    background-color: rgba(255, 0, 0, 0.2);
+
+nav ul li {
+    margin: 20px;
 }
+
 footer{
-    background-color: rgba(0, 255, 255, 0.2);
-}
-/* li {
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-} */
-h1 {
-    text-align: center;
-    font-family: Arial;
-    color: yellow;
-}
-h2 {
-    text-align: center;
-    font-family: Arial;
-    color: purple;
-}
-p {
-    line-height: 150%;
+    border-top-style: solid;
+    border-top-color: #000;
+    border-top-width: 2px;
 }
 
 div.flex {
