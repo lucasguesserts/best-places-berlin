@@ -3,6 +3,21 @@ body {
     font-size: 16px;
     background-color: #fffcee;
 }
+
+#skip-to-main-content {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+    color: #000;
+    background-color: #ff0;
+    transition-property: top, left;
+}
+
+#skip-to-main-content:focus {
+    top: 0px;
+    left: 0px;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -12,6 +27,7 @@ header {
     background-image: url(../images/BaconGallupPark.jpg);
     background-position: center;
     background-size: cover;
+    margin-bottom: 30px;
 }
 h1 {
     display: block;
@@ -33,6 +49,17 @@ nav a {
     border-width: 2px;
     background-color: #ddd;
     padding: 5px;
+    transition-property: background-color, color;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+nav a:hover {
+    background-color: #000;
+    color: #ddd;
+}
+nav a:not(:hover) {
+    /*disable transition on page load*/
+    transition: none;
 }
 nav ul {
     display: flex;
@@ -41,7 +68,6 @@ nav ul {
     padding: 10px;
     margin: 10px;
 }
-
 nav ul li {
     margin: 20px;
 }
@@ -52,13 +78,26 @@ footer{
     border-top-width: 2px;
 }
 
+img {
+    padding: 10px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 5px;
+    border-radius: 10%;
+    width: 100%;
+    margin: 10px;
+}
+
 div.flex {
     display: flex;
     flex-wrap: wrap;
-    img {
-        width: 200px;
-        margin: 20px;
-    }
+    justify-content: space-evenly;
+}
+div.flex img {
+    width: 200px;
+}
+div.flex img:nth-child(2n) {
+    border-radius: 50%;
 }
 
 div.grid {
@@ -67,21 +106,4 @@ div.grid {
     justify-content: space-evenly;
     align-items: center;
     row-gap: 20px;
-}
-div.grid img {
-    width: 100%;
-}
-
-#skip-to-main-content {
-    position: fixed;
-    top: -50px;
-    left: -50px;
-    color: #000;
-    background-color: #ff0;
-    transition-property: top, left;
-}
-
-#skip-to-main-content:focus {
-    top: 0px;
-    left: 0px;
 }
