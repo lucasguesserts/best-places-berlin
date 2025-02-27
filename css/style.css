@@ -67,3 +67,17 @@ div.grid {
 div.grid img {
     width: 100%;
 }
+
+#skip-to-main-content {
+    position: fixed;
+    top: -50px;
+    left: -50px;
+    color: #000;
+    background-color: #ff0;
+    transition-property: top, left;
+}
+
+#skip-to-main-content:focus {
+    top: 0px;
+    left: 0px;
+}
