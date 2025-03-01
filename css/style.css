@@ -1,109 +1,29 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    background-color: #fffcee;
+/*Name this external file gallery.css*/
+body{
+    margin: 2%;
+    border: 1px solid black;
+    background-color: #b3b3b3;
 }
-
-#skip-to-main-content {
-    position: fixed;
-    top: -50px;
-    left: -50px;
-    color: #000;
-    background-color: #ff0;
-    transition-property: top, left;
+#image{
+line-height:650px;
+    width: 575px;
+height: 650px;
+    border:5px solid black;
+    margin:0 auto;
+background-color: #8e68ff;
+background-image: url('');
+background-repeat: no-repeat;
+color:#FFFFFF;
+text-align: center;
+background-size: 100%;
+margin-bottom:25px;
+font-size: 150%;
 }
-
-#skip-to-main-content:focus {
-    top: 0px;
-    left: 0px;
+.preview{
+    width:10%;
+    margin-left:17%;
+border: 10px solid black;
 }
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    background-image: url(../images/BaconGallupPark.jpg);
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 30px;
-}
-h1 {
-    display: block;
-    margin: 20px auto;
-    width: fit-content;
-    background-color: #fffcee;
-    color: #000;
-    text-decoration: underline;
-}
-nav {
-    display: block;
-    margin: 20px auto;
-}
-nav a {
-    color: #000;
-    text-decoration: none;
-    border-style: solid;
-    border-color: #000;
-    border-width: 2px;
-    background-color: #ddd;
-    padding: 5px;
-    transition-property: background-color, color;
-    transition-delay: 0s;
-    transition-duration: 0.3s;
-}
-nav a:hover {
-    background-color: #000;
-    color: #ddd;
-}
-nav a:not(:hover) {
-    /*disable transition on page load*/
-    transition: none;
-}
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-}
-nav ul li {
-    margin: 20px;
-}
-
-footer{
-    border-top-style: solid;
-    border-top-color: #000;
-    border-top-width: 2px;
-}
-
-img {
-    padding: 10px;
-    border-style: solid;
-    border-color: #000;
-    border-width: 5px;
-    border-radius: 10%;
-    width: 100%;
-    margin: 10px;
-}
-
-div.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-div.flex img {
-    width: 200px;
-}
-div.flex img:nth-child(2n) {
-    border-radius: 50%;
-}
-
-div.grid {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: space-evenly;
-    align-items: center;
-    row-gap: 20px;
+img{
+    width:95%;
 }
