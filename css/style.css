@@ -1,39 +1,79 @@
-/*Name this external file gallery.css*/
-body{
-    margin: 2%;
-    border: 1px solid black;
-    background-color: #b3b3b3;
+html{
+    color: #000;
+    background-color: #dedede;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    font-size: 25px;
 }
 
-#image-focus{
-    line-height:650px;
-    width: 575px;
-    height: 650px;
-    border:5px solid black;
-    margin:0 auto;
-    background-color: #8e68ff;
-    background-image: url('');
-    background-repeat: no-repeat;
-    background-position: center;
-    color:#FFFFFF;
+h1 {
     text-align: center;
-    background-size: 100%;
-    margin-bottom:25px;
-    font-size: 150%;
+    font-size: 2em;
 }
 
-#images-preview {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+figure {
+    margin: 0px;
+    padding: 0px;
     img {
-        width: 200px;
-        height: auto;
-        border-style: solid;
-        border-color: #000;
-        margin: 20px;
+        box-sizing: border-box;
+        border: 5px solid blue;
+        border-radius: 35px;
+        width: 100%;
+    }
+    figcaption {
+        text-align: center;
     }
 }
+
+div.grid {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+@media all and (min-width:772px) {
+
+    figure img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    div.grid figure:last-child {
+        grid-column: span 2;
+    }
+
+    div.grid {
+        grid-template-columns: 40% 40%;
+
+    }
+}
+
+@media all and (min-width:992px) {
+    /* html { background-color: blue; } */
+
+    figure img {
+        border-radius: 0%;
+    }
+    div.grid figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: initial;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    figure {
+        color: #fffd8d;
+        background-color: #000;
+        img {
+            border-color: #000;
+        }
+    }
+  }
